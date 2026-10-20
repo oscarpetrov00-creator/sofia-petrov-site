@@ -17,7 +17,7 @@
   --shadow: 0 1px 2px rgba(20, 24, 40, .05), 0 8px 24px rgba(20, 24, 40, .06);
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --wrap: 1180px;
+  --wrap: 1300px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -379,4 +379,31 @@ section { padding: 88px 0; }
 @media (max-width: 900px) {
   .hero-photo { order: -1; }
   .hero-photo img { aspect-ratio: 1 / 1; max-width: 100%; object-position: 50% 10%; }
+}
+
+/* v3 header: two-line name, more air */
+
+.site-header .wrap { min-height: 96px; gap: 40px; }
+.brand { gap: 16px; }
+.brand img { width: 60px; }
+.brand-name { white-space: nowrap; font-size: 1.08rem; line-height: 1.25; letter-spacing: -.005em; }
+.brand-sub { margin-top: 4px; font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; }
+.nav { gap: 2px; }
+.nav a { padding: 8px 13px; }
+.nav a.btn { margin-left: 14px; padding: 12px 20px; }
+.topbar .wrap { padding-top: 9px; padding-bottom: 9px; }
+@media (max-width: 1260px) {
+  .nav-toggle { display: inline-block; }
+  .nav {
+    display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--paper);
+    flex-direction: column; align-items: stretch; padding: 12px 24px 20px; border-bottom: 1px solid var(--line);
+  }
+  .nav.open { display: flex; }
+  .nav a { padding: 12px 8px; font-size: 1.02rem; }
+  .nav a.btn { margin: 10px 0 0; justify-content: center; }
+}
+@media (max-width: 520px) {
+  .site-header .wrap { min-height: 80px; gap: 12px; }
+  .brand-name { font-size: .92rem; white-space: normal; }
+  .brand img { width: 46px; }
 }
