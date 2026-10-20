@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doctor Referral | Integrative Periodontology and Implant Center</title>
+<meta name="description" content="Refer a patient to Dr. Sofia Petrov, board-certified periodontist in Sequim, WA.">
+<link rel="icon" href="img/favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<div style="background:#e2ab3f;color:#1c2140;text-align:center;font:600 14px/1.4 Inter,system-ui,sans-serif;padding:9px 16px">
+  Preview of the new site. The contact and referral forms don't send yet; please call 360-775-4437.
+</div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar">
+  <div class="wrap">
+    <div><span>Tue – Thu 9:00am – 4:30pm</span><span class="hide-sm">Saturday by appointment</span></div>
+    <div><span class="hide-sm"><a href="https://maps.app.goo.gl/dTypHLrK5n7s6mwi9">512 E. Washington St., Sequim</a></span><span><a href="tel:+13607754437">360-775-4437</a></span></div>
+  </div>
+</div>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="img/logo.png" alt="Festina Lente butterfly logo" width="58" height="48">
+      <span><span class="brand-name">Integrative Periodontology<br>and Implant Center</span>
+      <span class="brand-sub">Sofia Petrov, DDS, MSD</span></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="treatments.html#lanap" class="nav-lanap">LANAP</a>
+      <a href="treatments.html">Treatments</a>
+      <a href="dr_petrov.html">Dr. Petrov</a>
+      <a href="forms.html">Patient Forms</a>
+      <a href="doctor-referral.html" aria-current="page">Referring Doctors</a>
+      <a href="contact-us.html">Contact</a>
+      <a class="btn btn-primary" href="tel:+13607754437">Call 360-775-4437</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="page-hero">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Home</a> / Doctor Referral</div>
+    <h1>Refer a patient</h1>
+    <p class="lede">A doctor referral form to make the referring patient process simple. After you have completed the form, please click the submit button at the bottom. Thank you.</p>
+  </div>
+</div>
+
+<div class="wrap form-wrap">
+  <div>
+    <span class="eyebrow">For referring doctors</span>
+    <h2>Working together on your patient's care</h2>
+    <div class="prose">
+      <p>Dr. Petrov believes that in order to provide the best care for her patients, an interdisciplinary approach to treatment planning is the key.</p>
+      <p>Prefer to call? Reach the office at <a href="tel:+13607754437">360-775-4437</a> or email <a href="mailto:sofiapetrovdds@gmail.com">sofiapetrovdds@gmail.com</a>.</p>
+    </div>
+    <div class="callout">
+      <h3>Office hours</h3>
+      <p style="margin:0">Tuesday – Thursday, 9:00am – 4:30pm<br>Saturday by appointment only<br>512 E. Washington St. Suite 1, Sequim, WA 98382</p>
+    </div>
+  </div>
+
+  <div class="panel">
+    <form id="reused_form" name="frm_doctor_referral" method="POST" action="send_email.php">
+      <input type="hidden" name="hdnPageAction" value="Submit">
+      <div class="row2">
+        <div class="field"><label for="refer_date">Date *</label><input name="refer_date" id="refer_date" type="date" required></div>
+        <div class="field"><label for="refer_doctor">From Doctor *</label><input name="refer_doctor" id="refer_doctor" type="text" required></div>
+        <div class="field"><label for="patient_name">Patient's Name *</label><input name="patient_name" id="patient_name" type="text" required></div>
+        <div class="field"><label for="patient_phone">Patient's Phone *</label><input name="patient_phone" id="patient_phone" type="tel" required></div>
+        <div class="field"><label for="patient_birth">Patient's Date of Birth *</label><input name="patient_birth" id="patient_birth" type="date" required></div>
+        <div class="field"><label for="patient_email">Patient's Email *</label><input name="patient_email" id="patient_email" type="email" required></div>
+      </div>
+
+      <span class="fieldset-label">Requested Treatment</span>
+      <div class="checks">
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_1" value="Full Mouth Periodontal Evaluation"> Full Mouth Periodontal Evaluation</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_2" value="Guided Tissue Regeneration"> Guided Tissue Regeneration</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_3" value="Laser Therapy LANAP/ LAPIP"> Laser Therapy (LANAP / LAPIP)</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_4" value="Gingival Tissue Grafting"> Gingival Tissue Grafting</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_5" value="Extraction/Bone Grafting"> Extraction / Bone Grafting</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_6" value="Ridge/Sinus Augmentation"> Ridge / Sinus Augmentation</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_7" value="Crown Lengthening"> Crown Lengthening</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_8" value="Dental Implant"> Dental Implants</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_9" value="Wilckodontics - PAOO"> Wilckodontics (PAOO)</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_10" value="Frenectomy"> Frenectomy</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_11" value="Pathology / Biopsy"> Pathology / Biopsy</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_12" value="Scaling/Root Planing"> Scaling / Root Planing</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_13" value="Other"> Other</label>
+      </div>
+      <div class="field"><label for="periodontal_concerns_13_input">Other (please specify)</label><input name="Other" id="periodontal_concerns_13_input" type="text"></div>
+      <div class="field"><label for="comments">Message</label><textarea name="comments" id="comments" placeholder="Anything we should know about this patient"></textarea></div>
+      <div class="g-recaptcha" data-sitekey="6LcteK0pAAAAAPI9z7R7hffsXJRq40-YJosjtbrH"></div>
+      <button class="btn btn-primary" type="submit">Send referral</button>
+    </form>
+  </div>
+</div>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  document.getElementById("reused_form").addEventListener("submit", function (evt) {
+    if (window.grecaptcha && grecaptcha.getResponse().length === 0) {
+      alert("Please verify that you are not a robot");
+      evt.preventDefault();
+    }
+  });
+</script>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><img src="img/logo.png" alt="" width="56" height="46"><strong>Integrative Periodontology<br>and Implant Center</strong></div>
+        <p>At Integrative Periodontology and Implant Center we are dedicated to providing exceptional dental care with a focus on your health, comfort, and satisfaction. Our team of experienced and compassionate professionals is committed to delivering personalized treatments, utilizing advanced technology, and fostering a warm, welcoming atmosphere.</p>
+        <p class="foot-motto">Festina lente.</p>
+        <div class="social">
+          <a href="https://www.facebook.com/share/nNpQZf5EVuX414TU/?mibextid=LQQJ4d">Facebook</a>
+          <a href="https://www.linkedin.com/in/sofia-petrov-7b5b9a47">LinkedIn</a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="treatments.html">Treatment Options</a></li>
+          <li><a href="treatments.html#lanap">LANAP Laser Therapy</a></li>
+          <li><a href="dr_petrov.html">Dr. Sofia Petrov</a></li>
+          <li><a href="forms.html">Patient Forms</a></li>
+          <li><a href="doctor-referral.html">Doctor Referral</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Office Hours</h4>
+        <p>Tuesday – Thursday<br>9:00am – 4:30pm</p>
+        <p>Saturday by appointment only</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+13607754437">360-775-4437</a></li>
+          <li><a href="mailto:sofiapetrovdds@gmail.com">sofiapetrovdds@gmail.com</a></li>
+          <li><a href="https://maps.app.goo.gl/dTypHLrK5n7s6mwi9">512 E. Washington St. Suite 1<br>Sequim, WA 98382</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024–2026 Integrative Periodontology and Implant Center. All rights reserved.</span>
+      <span><a href="privacy_policy.html">Privacy Policy &amp; Disclosure</a></span>
+    </div>
+  </div>
+</footer>
+<script>
+  (function () {
+    var b = document.querySelector('.nav-toggle'), n = document.getElementById('nav');
+    if (!b || !n) return;
+    b.addEventListener('click', function () {
+      var open = n.classList.toggle('open');
+      b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      b.textContent = open ? 'Close' : 'Menu';
+    });
+  })();
+</script>
+<script>
+  document.querySelectorAll('form').forEach(function (f) {
+    f.addEventListener('submit', function (e) {
+      e.preventDefault(); e.stopImmediatePropagation();
+      alert('This is a preview. Forms will work once the new site is live. Please call 360-775-4437.');
+    }, true);
+  });
+</script>
+</body>
+</html>
