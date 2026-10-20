@@ -407,3 +407,33 @@ section { padding: 88px 0; }
   .brand-name { font-size: .92rem; white-space: normal; }
   .brand img { width: 46px; }
 }
+
+/* Google reviews */
+[hidden] { display: none !important; }
+.stars { position: relative; display: inline-block; font-size: 1rem; line-height: 1; letter-spacing: 2px; color: #d9d4ca; vertical-align: -1px; }
+.stars::before { content: "★★★★★"; }
+.stars-fill { position: absolute; left: 0; top: 0; overflow: hidden; white-space: nowrap; color: var(--warm); }
+.stars-fill::before { content: "★★★★★"; }
+.g-rating { margin-top: 18px; }
+.g-rating-link { display: inline-flex; align-items: center; gap: 8px; color: var(--ink-2); text-decoration: none; font-size: .95rem; }
+.g-rating-link strong { color: var(--ink); font-weight: 600; }
+.g-rating-link:hover { color: var(--accent); }
+.reviews { background: var(--surface); border-bottom: 1px solid var(--line); }
+.reviews-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 36px; flex-wrap: wrap; }
+.reviews-head h2 { margin-bottom: 8px; }
+.reviews-summary { margin: 0; color: var(--ink-2); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.gm-logo { height: 18px; width: auto; margin: 10px 0 5px 10px; }
+.review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.review { margin: 0; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; }
+.review-head { display: flex; gap: 12px; align-items: center; margin-bottom: 14px; }
+.review-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex: none; }
+.review-name { font-weight: 600; color: var(--ink); text-decoration: none; display: block; }
+a.review-name:hover { color: var(--accent); }
+.review-line { display: flex; gap: 10px; align-items: center; font-size: .85rem; color: var(--muted); margin-top: 2px; }
+.review-line .stars { font-size: .85rem; }
+.review-text { margin: 0 0 12px; font-size: .97rem; line-height: 1.65; color: var(--ink-2); white-space: pre-line; }
+.review-text.clamped { display: -webkit-box; -webkit-line-clamp: 7; -webkit-box-orient: vertical; overflow: hidden; }
+.review-more { align-self: flex-start; background: none; border: 0; padding: 0; font: 600 .88rem var(--sans); color: var(--accent); cursor: pointer; margin-bottom: 12px; }
+.review-source { margin-top: auto; font-size: .85rem; color: var(--muted); }
+.reviews-actions { margin-top: 32px; }
+@media (max-width: 960px) { .review-grid { grid-template-columns: 1fr; } }

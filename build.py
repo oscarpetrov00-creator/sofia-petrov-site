@@ -95,6 +95,7 @@ FOOTER = f"""<footer class="site-footer">
           <li><a href="forms.html">Patient Forms</a></li>
           <li><a href="doctor-referral.html">Doctor Referral</a></li>
           <li><a href="contact-us.html">Contact Us</a></li>
+          <li data-write-review hidden><a href="#">Leave a Google review</a></li>
         </ul>
       </div>
       <div>
@@ -117,6 +118,7 @@ FOOTER = f"""<footer class="site-footer">
     </div>
   </div>
 </footer>
+<script src="js/reviews.js" defer></script>
 <script>
   (function () {{
     var b = document.querySelector('.nav-toggle'), n = document.getElementById('nav');
@@ -176,7 +178,7 @@ def main():
     preview = "--preview" in sys.argv
     out = Path(sys.argv[sys.argv.index("--preview") + 1]) if preview else OUT
     if preview:
-        for sub in ("css", "img", "pdf"):
+        for sub in ("css", "img", "pdf", "js"):
             shutil.copytree(OUT / sub, out / sub, dirs_exist_ok=True)
         (out / ".nojekyll").write_text("")
     for name, (title, desc) in PAGES.items():
