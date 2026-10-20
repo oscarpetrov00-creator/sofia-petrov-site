@@ -10,8 +10,8 @@
  * stored), every review credits its author, and the Google Maps logo is shown.
  */
 (function () {
-  var API_KEY = "";
-  var PLACE_ID = "";
+  var API_KEY = "AIzaSyAycDEDU7wHFBxztQeO67j8j-8RLtuJj54";
+  var PLACE_ID = "ChIJcdsXyZu_j1QR1B-7F93P8NA";
   if (!API_KEY || !PLACE_ID) return;
 
   var writeUrl = "https://search.google.com/local/writereview?placeid=" + encodeURIComponent(PLACE_ID);
