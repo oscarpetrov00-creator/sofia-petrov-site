@@ -1,0 +1,47 @@
+<div class="page-hero">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Home</a> / Contact</div>
+    <h1>Contact us</h1>
+    <p class="lede">Have questions or specific concerns? Our dedicated team is here to provide personalized assistance tailored to your needs. Whether you're seeking information, scheduling an appointment, or requiring support, feel free to reach out.</p>
+  </div>
+</div>
+
+<div class="wrap form-wrap">
+  <div class="visit">
+    <dl>
+      <div><dt>Call today</dt><dd><a href="tel:+13607754437">(360) 775-4437</a></dd></div>
+      <div><dt>Email</dt><dd><a href="mailto:sofiapetrovdds@gmail.com">sofiapetrovdds@gmail.com</a></dd></div>
+      <div><dt>Office hours</dt><dd>Tuesday – Thursday, 9:00am – 4:30pm<br>Saturday by appointment only</dd></div>
+      <div><dt>Location</dt><dd><a href="https://maps.app.goo.gl/dTypHLrK5n7s6mwi9">512 E. Washington St. Suite 1<br>Sequim, WA 98382</a></dd></div>
+    </dl>
+    <div class="map" style="margin-top:32px">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2665.5717959592066!2d-123.0982253242525!3d48.07990767123719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548fbf5ed1b64603%3A0x6abeb8e8ca3e8a4f!2s512%20E%20Washington%20St%20%231%2C%20Sequim%2C%20WA%2098382%2C%20USA!5e0!3m2!1sen!2sus!4v1710325699007!5m2!1sen!2sus" title="Map to 512 E. Washington St., Sequim" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2 style="font-size:1.5rem">Send us a message</h2>
+    <p class="note" style="margin-bottom:22px">Please don't include sensitive medical details in this form. We'll follow up by phone or email.</p>
+    <form id="reused_form" method="POST" action="send_email.php">
+      <input type="hidden" name="hdnPageAction" value="Contact">
+      <div class="field"><label for="name">Your name *</label><input name="name" id="name" type="text" required></div>
+      <div class="row2">
+        <div class="field"><label for="email">Email *</label><input name="email" id="email" type="email" required></div>
+        <div class="field"><label for="phone">Phone *</label><input name="phone" id="phone" type="tel" required></div>
+      </div>
+      <div class="field"><label for="comments">Message</label><textarea name="comments" id="comments" placeholder="How can we help?"></textarea></div>
+      <div class="g-recaptcha" data-sitekey="6LdlY60pAAAAAO9pQzCF4_ausX5fOgMG2reXdYNV"></div>
+      <button class="btn btn-primary" type="submit">Send message</button>
+    </form>
+  </div>
+</div>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  document.getElementById("reused_form").addEventListener("submit", function (evt) {
+    if (window.grecaptcha && grecaptcha.getResponse().length === 0) {
+      alert("Please verify that you are not a robot");
+      evt.preventDefault();
+    }
+  });
+</script>

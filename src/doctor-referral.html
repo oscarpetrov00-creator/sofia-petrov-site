@@ -1,0 +1,67 @@
+<div class="page-hero">
+  <div class="wrap">
+    <div class="crumbs"><a href="index.html">Home</a> / Doctor Referral</div>
+    <h1>Refer a patient</h1>
+    <p class="lede">A doctor referral form to make the referring patient process simple. After you have completed the form, please click the submit button at the bottom. Thank you.</p>
+  </div>
+</div>
+
+<div class="wrap form-wrap">
+  <div>
+    <span class="eyebrow">For referring doctors</span>
+    <h2>Working together on your patient's care</h2>
+    <div class="prose">
+      <p>Dr. Petrov believes that in order to provide the best care for her patients, an interdisciplinary approach to treatment planning is the key.</p>
+      <p>Prefer to call? Reach the office at <a href="tel:+13607754437">360-775-4437</a> or email <a href="mailto:sofiapetrovdds@gmail.com">sofiapetrovdds@gmail.com</a>.</p>
+    </div>
+    <div class="callout">
+      <h3>Office hours</h3>
+      <p style="margin:0">Tuesday – Thursday, 9:00am – 4:30pm<br>Saturday by appointment only<br>512 E. Washington St. Suite 1, Sequim, WA 98382</p>
+    </div>
+  </div>
+
+  <div class="panel">
+    <form id="reused_form" name="frm_doctor_referral" method="POST" action="send_email.php">
+      <input type="hidden" name="hdnPageAction" value="Submit">
+      <div class="row2">
+        <div class="field"><label for="refer_date">Date *</label><input name="refer_date" id="refer_date" type="date" required></div>
+        <div class="field"><label for="refer_doctor">From Doctor *</label><input name="refer_doctor" id="refer_doctor" type="text" required></div>
+        <div class="field"><label for="patient_name">Patient's Name *</label><input name="patient_name" id="patient_name" type="text" required></div>
+        <div class="field"><label for="patient_phone">Patient's Phone *</label><input name="patient_phone" id="patient_phone" type="tel" required></div>
+        <div class="field"><label for="patient_birth">Patient's Date of Birth *</label><input name="patient_birth" id="patient_birth" type="date" required></div>
+        <div class="field"><label for="patient_email">Patient's Email *</label><input name="patient_email" id="patient_email" type="email" required></div>
+      </div>
+
+      <span class="fieldset-label">Requested Treatment</span>
+      <div class="checks">
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_1" value="Full Mouth Periodontal Evaluation"> Full Mouth Periodontal Evaluation</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_2" value="Guided Tissue Regeneration"> Guided Tissue Regeneration</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_3" value="Laser Therapy LANAP/ LAPIP"> Laser Therapy (LANAP / LAPIP)</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_4" value="Gingival Tissue Grafting"> Gingival Tissue Grafting</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_5" value="Extraction/Bone Grafting"> Extraction / Bone Grafting</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_6" value="Ridge/Sinus Augmentation"> Ridge / Sinus Augmentation</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_7" value="Crown Lengthening"> Crown Lengthening</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_8" value="Dental Implant"> Dental Implants</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_9" value="Wilckodontics - PAOO"> Wilckodontics (PAOO)</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_10" value="Frenectomy"> Frenectomy</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_11" value="Pathology / Biopsy"> Pathology / Biopsy</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_12" value="Scaling/Root Planing"> Scaling / Root Planing</label>
+        <label><input type="checkbox" name="periodontal_concerns[]" id="periodontal_concerns_13" value="Other"> Other</label>
+      </div>
+      <div class="field"><label for="periodontal_concerns_13_input">Other (please specify)</label><input name="Other" id="periodontal_concerns_13_input" type="text"></div>
+      <div class="field"><label for="comments">Message</label><textarea name="comments" id="comments" placeholder="Anything we should know about this patient"></textarea></div>
+      <div class="g-recaptcha" data-sitekey="6LcteK0pAAAAAPI9z7R7hffsXJRq40-YJosjtbrH"></div>
+      <button class="btn btn-primary" type="submit">Send referral</button>
+    </form>
+  </div>
+</div>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  document.getElementById("reused_form").addEventListener("submit", function (evt) {
+    if (window.grecaptcha && grecaptcha.getResponse().length === 0) {
+      alert("Please verify that you are not a robot");
+      evt.preventDefault();
+    }
+  });
+</script>
