@@ -13,7 +13,7 @@ PHONE = "360-775-4437"
 TEL = "tel:+13607754437"
 EMAIL = "sofiapetrovdds@gmail.com"
 ADDRESS = "512 E. Washington St. Suite 1, Sequim, WA 98382"
-MAPS = "https://maps.app.goo.gl/dTypHLrK5n7s6mwi9"
+MAPS = "https://maps.google.com/?cid=15055762102792429524"
 
 PAGES = {
     "index": ("Integrative Periodontology and Implant Center | Sofia Petrov, DDS, MSD | Sequim, WA",
