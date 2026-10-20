@@ -155,11 +155,39 @@ def page(name, title, desc, body):
 """
 
 
+PREVIEW_BANNER = """<div style="background:#e2ab3f;color:#1c2140;text-align:center;font:600 14px/1.4 Inter,system-ui,sans-serif;padding:9px 16px">
+  Preview of the new site. The contact and referral forms don't send yet; please call 360-775-4437.
+</div>"""
+
+PREVIEW_JS = """<script>
+  document.querySelectorAll('form').forEach(function (f) {
+    f.addEventListener('submit', function (e) {
+      e.preventDefault(); e.stopImmediatePropagation();
+      alert('This is a preview. Forms will work once the new site is live. Please call 360-775-4437.');
+    }, true);
+  });
+</script>"""
+
+
 def main():
+    """`build.py` writes site/. `build.py --preview DIR` writes a GitHub Pages copy
+    with a preview banner and forms disabled (send_email.php only exists on GoDaddy)."""
+    import shutil, sys
+    preview = "--preview" in sys.argv
+    out = Path(sys.argv[sys.argv.index("--preview") + 1]) if preview else OUT
+    if preview:
+        for sub in ("css", "img", "pdf"):
+            shutil.copytree(OUT / sub, out / sub, dirs_exist_ok=True)
+        (out / ".nojekyll").write_text("")
     for name, (title, desc) in PAGES.items():
         body = (SRC / f"{name}.html").read_text()
-        (OUT / f"{name}.html").write_text(page(name, title, desc, body))
-        print("built", name)
+        html = page(name, title, desc, body)
+        if preview:
+            html = html.replace('<a class="skip"', PREVIEW_BANNER + '\n<a class="skip"', 1)
+            html = html.replace("</body>", PREVIEW_JS + "\n</body>")
+            html = html.replace("<head>", '<head>\n<meta name="robots" content="noindex">', 1)
+        (out / f"{name}.html").write_text(html)
+        print("built", name, "(preview)" if preview else "")
 
 
 if __name__ == "__main__":
