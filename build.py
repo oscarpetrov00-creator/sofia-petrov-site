@@ -53,7 +53,7 @@ def header(page):
     return f"""<a class="skip" href="#main">Skip to content</a>
 <div class="topbar">
   <div class="wrap">
-    <div><span>Tue – Thu 9:00am – 4:30pm</span><span class="hide-sm">Saturday by appointment</span></div>
+    <div><span>Tue – Thu 9:00am – 4:30pm</span></div>
     <div><span class="hide-sm"><a href="{MAPS}">512 E. Washington St., Sequim</a></span><span><a href="{TEL}">{PHONE}</a></span></div>
   </div>
 </div>
@@ -101,7 +101,6 @@ FOOTER = f"""<footer class="site-footer">
       <div>
         <h4>Office Hours</h4>
         <p>Tuesday – Thursday<br>9:00am – 4:30pm</p>
-        <p>Saturday by appointment only</p>
       </div>
       <div>
         <h4>Contact</h4>
