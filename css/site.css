@@ -437,3 +437,18 @@ a.review-name:hover { color: var(--accent); }
 .review-source { margin-top: auto; font-size: .85rem; color: var(--muted); }
 .reviews-actions { margin-top: 32px; }
 @media (max-width: 960px) { .review-grid { grid-template-columns: 1fr; } }
+
+/* v6: LANAP section on white */
+.lanap { background: var(--surface); color: var(--ink); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.lanap h2, .lanap h3 { color: var(--ink); }
+.lanap .eyebrow { color: var(--accent); }
+.lanap p { color: var(--ink-2); }
+.lanap .lede { color: var(--ink); }
+.lanap .fact { background: var(--accent-soft); border: 1px solid #e0e0f0; }
+.lanap .fact strong { color: var(--accent-ink); }
+.lanap .fact span { color: var(--ink-2); }
+.lanap .video { box-shadow: var(--shadow); }
+.lanap-side small { color: var(--muted); }
+.lanap-lapip { background: var(--paper); border: 1px solid var(--line); }
+.lanap-lapip a { color: var(--accent); }
+.lanap + .reviews { border-top: 0; background: var(--paper); }
