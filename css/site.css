@@ -452,3 +452,11 @@ a.review-name:hover { color: var(--accent); }
 .lanap-lapip { background: var(--paper); border: 1px solid var(--line); }
 .lanap-lapip a { color: var(--accent); }
 .lanap + .reviews { border-top: 0; background: var(--paper); }
+
+/* Directions */
+.map-col { display: flex; flex-direction: column; gap: 16px; }
+.map-col .map { flex: 1; }
+.directions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 16px; }
+.map-col .directions { margin-top: 0; }
+.directions span { font-weight: 600; font-size: .92rem; color: var(--ink-2); margin-right: 4px; }
+.directions .btn { padding: 10px 18px; font-size: .92rem; }
